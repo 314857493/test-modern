@@ -1,14 +1,4 @@
 import { Outlet, useNavigate } from '@modern-js/runtime/router';
-import './index.css';
-
-import { RuntimeContext } from '@modern-js/runtime';
-
-export const init = (context: RuntimeContext) => {
-  console.log(context);
-  return {
-    message: 'Hello World',
-  };
-};
 
 export default function Layout() {
   const navigate = useNavigate();
@@ -16,10 +6,10 @@ export default function Layout() {
     <div>
       <button
         onClick={() => {
-          navigate('/');
+          navigate('/user');
         }}
       >
-        main
+        跳转到user
       </button>
       <Outlet />
     </div>
